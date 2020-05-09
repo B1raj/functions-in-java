@@ -18,3 +18,5 @@ Codind somrthing which is the basics of functional programming.
 - git rm -r --cached myFolder to delete folder/file without deleting the files from local
 - **Folding**: converting a list into a single value by using a specific operation, the resulting value may be of different type.
 - **Reducing** : Folding to a result of the same type as the list element.
+- **recursion** : It starts from last step and defines its relationship with the preceding one.
+- **corecursion** : It starts from first step and defines its relationship with the next one.

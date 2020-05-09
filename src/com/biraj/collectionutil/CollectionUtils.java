@@ -1,6 +1,8 @@
-package com.biraj;
+package com.biraj.collectionutil;
 
 import java.util.*;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class CollectionUtils {
 
@@ -46,5 +48,28 @@ public class CollectionUtils {
         List<T> ls = copy(list);
         ls.add(t);
         return Collections.unmodifiableList(ls);
+    }
+
+    public static <T> T fold(List<T> list, T startValue, Function<T, Function<T,T>> f ){
+        T result = startValue;
+        for(T t: list){
+            result = f.apply(result).apply(t);
+        }
+        return result;
+    }
+    public static <S,I> S foldLeft(List<I> list, S startValue, Function<S, Function<I,S>> f ){
+        S result = startValue;
+        for(I t: list){
+            result = f.apply(result).apply(t);
+        }
+        return result;
+    }
+
+    public static <S,I> S foldRight(List<I> list, S startValue, Function<I, Function<S,S>> f ){
+        S result = startValue;
+        for(int i = list.size();i>0;i--){
+            result = f.apply(list.get(i-1)).apply(result);
+        }
+        return result;
     }
 }
