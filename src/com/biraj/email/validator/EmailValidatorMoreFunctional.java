@@ -17,7 +17,6 @@ interface FinalResult<T>{
     }
 
     class Success<T> implements FinalResult<T>{
-
         private final T value;
 
         public Success(T t) {
