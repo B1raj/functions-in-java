@@ -12,7 +12,9 @@ Codind somrthing which is the basics of functional programming.
 - Replace if else with ternary operators, its more functional and has no side effects.
 - use of instanceof is bad code
 - Don't trust names, trust types, because types don't lie
-- Zipping : taking to lists and converting them to a tuple
-- Unzipping : Reverse of above
+- **Zipping** : taking to lists and converting them to a tuple
+- **Unzipping** : Reverse of above
 - Generic Functions are hard to write. But Generic methods are good.
 - git rm -r --cached myFolder to delete folder/file without deleting the files from local
+- **Folding**: converting a list into a single value by using a specific operation, the resulting value may be of different type.
+- **Reducing** : Folding to a result of the same type as the list element.
