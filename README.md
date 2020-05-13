@@ -20,3 +20,12 @@ Codind somrthing which is the basics of functional programming.
 - **Reducing** : Folding to a result of the same type as the list element.
 - **recursion** : It starts from last step and defines its relationship with the preceding one.
 - **corecursion** : It starts from first step and defines its relationship with the next one.
+- foreach
+   ``` 
+  public static <T> void forEach(Collection<T> ts, Consumer<T> c){
+           for (T t : ts){
+               c.accept(t);
+           }
+       }
+   ```
+

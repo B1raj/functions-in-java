@@ -11,7 +11,6 @@ public class SupplierDemo {
        return "hello";
     };
     public static void main(String[] args) {
-        Tuple t ;
         System.out.println(supplierBooleanFunction.apply(supplier));
         System.out.println(supplierBooleanFunction.apply(()-> "hello1"));
         System.out.println(supplier.get());

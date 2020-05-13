@@ -72,4 +72,22 @@ public class CollectionUtils {
         }
         return result;
     }
+
+    public static <T> List<T> reverse(List<T> list){
+        List<T>  newList = new ArrayList<>();
+        for(int i = list.size();i>0;i--){
+            newList.add(list.get(i-1));
+        }
+        return Collections.unmodifiableList(newList);
+    }
+
+
+
+    public static <T,U> List<U> map(List<T> list, Function<T, U> f) {
+        List<U> newList = new ArrayList<>();
+        for(T value :list){
+            newList.add(f.apply(value));
+        }
+        return newList;
+    }
 }
